@@ -232,15 +232,16 @@ img {
     color: #FFFFFF;
 }
 
-.hero-btn {
+.hero-btn, .modal-btn {
     font-family: inherit;
+    width: 200px;
     font-size: 16px;
     line-height: 1.9;
     align-items: center;
     letter-spacing: 0.06em;
     display: inline;
     cursor: pointer;
-    border: none;
+    border: transparent;
     padding: 10px 32px;
     border-radius: 4px;
     
@@ -252,7 +253,7 @@ img {
 }
 
 .hero-btn:hover, 
-.hero-btn:focus {
+.hero-btn:focus, .modal-btn:hover, .modal-btn:focus {
     font-family: inherit;
     font-size: 16px;
     line-height: 1.9;
@@ -747,16 +748,7 @@ img {
     transition: transfom var(--typical-effect-time) var(--typical-transition-timing-function);
 }
 
-.modal-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.1;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--header-color);
-    margin-bottom: 30px;
-}
-
+/* modal-close */
 .modal-close {
     width: 30px;
     height: 30px;
@@ -774,43 +766,160 @@ img {
     right: 8px;
 }
 
+/* Modal-title */
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-color);
+    margin-bottom: 12px;
+}
+
+/* modal-field */
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Imput-text */
+.input-text {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+
+    color: #757575;
+}
+
+/* input-wrap */
+.input-wrap {
+    position: relative;
+}
+
+/* modal-input */
 .modal-input {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 28px;
     background-color: transparent;
-    padding-left: 15px;
+    padding-left: 42px;
+    outline: none;
 }
 
-.modal-input::placeholder {
-    font-size: 12px;
-    line-height: 1.2;
+.modal-input:focus {
+    border-color: var(--accent-color);
+}
+
+.modal-input:focus+.input-icon {
+    fill: var(--accent-color);
+}
+
+/* input-icon */
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* modal-text */
+.modal-text {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.modal-text::placeholder {
+    font-size: 14px;
+    line-height: 1.1;
     letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-text:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* form-conditions */
+.form-conditions {
+    margin-bottom: 30px;
+    width: 423px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* modal-check-text */
+.modal-check-text {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
     
     color: #757575;
 }
 
-.modal-btn {
-    font-weight: 700;
+.modal-check-text::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+    margin-right: 8.38px;
+}
+
+.modal-check:checked + .modal-check-text::before {
+    content: '';
+    border: transparent;
+    background-color: var(--accent-color);
+    background-image: url(../images/check.svg);
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* modal-btn */
+/* .modal-btn {
+    font-family: inherit;
     font-size: 16px;
     line-height: 1.8;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+    cursor: pointer;
     width: 200px;
     height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    border-color: transparent;
+    transition: background-color var(--typical-effect-time) var(--typical-transition-timing-function);
 }
+
+.modal-btn:hover, .modal-btn:focus {
+    background-color: #188CE8;
+} */
 
 .is-hidden {
     opacity: 0;

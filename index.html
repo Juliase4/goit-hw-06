@@ -529,6 +529,29 @@
             </li>
           </ul>
         </div>
+        <div class="newsletter">
+          <h3 class="newsletter-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
+          <form action="" class="newsletter-form">
+            <div class="online-field">
+              <label for="online-name" class="online-label"></label>
+              <input
+                type="text"
+                placeholder="E-mail"
+                id="online-name"
+                name="online-name"
+                class="online-input"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="footer-subscription">
+          <button type="button" class="footer-btn">
+            Подписаться
+            <svg class="footer-subscription-icon" width="24" height="24">
+              <use href="./images/icons/symbol-defs.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </footer>
 
@@ -609,10 +632,14 @@
               id="modal-check"
               name="privacy-check"
             />
-            <label for="modal-check" class="modal-check-text"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="link" href=""> Условия договора</a></label
-            >
+            <label for="modal-check" class="modal-check-text">
+              <span class="conditions-text-basic"
+                >Соглашаюсь с рассылкой и принимаю
+                <span>
+                  <a class="conditions-text link" href="">Условия договора</a>
+                </span>
+              </span>
+            </label>
           </div>
           <button type="submit" class="modal-btn">Отправить</button>
         </form>

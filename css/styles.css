@@ -869,10 +869,6 @@ display: flex;
     margin-bottom: 10px;
 }
 
-.modal-field:last-child {
-    margin-bottom: 10px;
-}
-
 /* Imput-text */
 .input-text {
     display: block;

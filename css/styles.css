@@ -869,7 +869,7 @@ display: flex;
     margin-bottom: 10px;
 }
 
-.modal-field:not(:last-child) {
+.modal-field:last-child {
     margin-bottom: 10px;
 }
 
